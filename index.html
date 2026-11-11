@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى لاڤين | 11.11</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="starsCanvas"></canvas>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+
+    <!-- شاشة البداية -->
+    <section id="intro" class="screen active">
+        <div class="intro-content">
+            <div class="tiny-star">✦</div>
+            <p class="eyebrow">11 . 11 — يوم مميز</p>
+            <h1>إلى <span>لاڤين</span></h1>
+            <p class="intro-text">
+                في السماء نجوم كثيرة،<br>
+                لكن في نجمة إلها مكان مختلف...
+            </p>
+            <button id="startButton" class="main-button">
+                اكتشفي نجومك <span>✧</span>
+            </button>
+            <div class="intro-bottom">A LITTLE UNIVERSE MADE FOR YOU</div>
+        </div>
+    </section>
+
+    <!-- عالم النجوم -->
+    <section id="universeScreen" class="screen">
+        <header class="universe-header">
+            <p class="eyebrow">A SKY FULL OF WORDS</p>
+            <h2>كل نجمة بتحكيلك <span>شغلة</span></h2>
+            <p>اضغطي على النجوم واكتشفي شو مخبّى إلك بينها</p>
+        </header>
+
+        <div class="progress-area">
+            <div class="progress-info">
+                <span>رحلتك بين النجوم</span>
+                <span id="progressText">0 / 8</span>
+            </div>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="star-universe">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <button class="star-node star-1" data-star="0">
+                <span class="star-icon">✦</span>
+                <span class="star-label">الأثر</span>
+            </button>
+
+            <button class="star-node star-2" data-star="1">
+                <span class="star-icon">✧</span>
+                <span class="star-label">الروح</span>
+            </button>
+
+            <button class="star-node star-3" data-star="2">
+                <span class="star-icon">✦</span>
+                <span class="star-label">الضحكة</span>
+            </button>
+
+            <button class="star-node star-4" data-star="3">
+                <span class="star-icon">✧</span>
+                <span class="star-label">القيمة</span>
+            </button>
+
+            <button class="star-node star-5" data-star="4">
+                <span class="star-icon">✦</span>
+                <span class="star-label">التفاصيل</span>
+            </button>
+
+            <button class="star-node star-6" data-star="5">
+                <span class="star-icon">✧</span>
+                <span class="star-label">الامتنان</span>
+            </button>
+
+            <button class="star-node star-7" data-star="6">
+                <span class="star-icon">✦</span>
+                <span class="star-label">الجمال</span>
+            </button>
+
+            <button class="star-node star-8 locked" data-star="7" id="lastStar">
+                <span class="lock-icon">✧</span>
+                <span class="star-label">المفاجأة</span>
+            </button>
+
+            <div class="universe-center">
+                <span>✧</span>
+                <small>11.11</small>
+            </div>
+        </div>
+
+        <p class="universe-hint" id="universeHint">
+            النجمة الأخيرة إلها حكاية خاصة... ✨
+        </p>
+    </section>
+
+    <!-- نافذة الرسائل -->
+    <div class="modal-overlay" id="messageModal">
+        <div class="message-card">
+            <div class="card-top-decoration">✧　✦　✧</div>
+            <p class="card-eyebrow" id="messageNumber">STAR 01</p>
+            <h2 id="messageTitle">نجمة الأثر</h2>
+            <div class="card-divider"><span>✦</span></div>
+            <p id="messageText"></p>
+            <button id="messageContinue" class="main-button">
+                متابعة الرحلة <span>✧</span>
+            </button>
+            <button id="closeModal" class="text-button">العودة إلى النجوم</button>
+        </div>
+    </div>
+
+    <!-- الرسالة الأخيرة -->
+    <section id="finalScreen" class="screen">
+        <div class="final-container">
+            <div class="final-top-icon">✦</div>
+            <p class="eyebrow">A LITTLE MESSAGE FOR YOU</p>
+            <h1>ولأنك <span>مميزة...</span></h1>
+            <div class="final-divider"><span>✧</span></div>
+
+            <div class="letter-card">
+                <div class="letter-decoration">❝</div>
+                <div id="finalMessage" class="final-message"></div>
+                <div class="letter-bottom">✦　✧　✦</div>
+            </div>
+
+            <div id="signature" class="signature">
+                <span class="signature-small">With Love</span>
+                <span class="signature-name">RAYAN</span>
+                <span class="signature-heart">♥</span>
+            </div>
+
+            <p class="final-date">11 . 11 — A DAY TO REMEMBER</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
